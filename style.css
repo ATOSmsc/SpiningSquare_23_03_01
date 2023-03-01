@@ -11,6 +11,15 @@ body
     align-items: center;
     min-width: 100vh;
     background: #050505;
+	padding: 0;
+	margin: 0;
+	
+	max-width: 1280px;
+	max-height: 1080px;
+}
+.meio
+{
+    padding: 50px;
 }
 .cube
 {
@@ -83,27 +92,42 @@ body
 {
     width: 200px;
     height: 200px;
-    background-color: #ccc;
     position: absolute;
     left: 0;
     top: 0;
 }
+/* GIF */
+.my-element 
+{
+    background-image: url('saw-gif-.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* TAMANHO DO GIB */
 #minhaDiv2
 {
-    width: 200px;
-    height: 200px;
+    width: 1000px;
+    height: 620px;
     background-color: #ccc;
     position: absolute;
     left: 0;
     top: 0;
 }
-.tarja
-{
-    background: #ccc;
-    width: 1px;
-    height: 10px;
+/* POSIÇÃO DO GIF */
+.minhaDiv_gif_P
+{	
+	margin: auto;
+	padding: auto;
+	margin-left: 800px;
+	margin-top: 80px;
 }
 
+/*
+.tarja
+{
+	margin: 100%;
+}
 .arrow-down 
 {
     width: 0;
@@ -121,17 +145,4 @@ body
     border-right: 10px solid transparent;
     border-bottom: 20px solid black;
 }
-.my-element 
-{
-    background-image: url('saw-gif-.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.my-element2
-{
-    background-image: url('seta.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+*/
