@@ -21,7 +21,6 @@ function iniciarArrastar(e)
             document.addEventListener("mousemove", moverDiv);
     }
 }
-
 function moverDiv(e) 
 {
     e.preventDefault();
@@ -35,7 +34,6 @@ function moverDiv(e)
         minhaDiv.style.top = e.clientY - offsetY + "px";
     }
 }
-
 function pararArrastar(e) 
 {
     if (e.type === "touchend") {

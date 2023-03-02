@@ -1,8 +1,9 @@
 *
 {   
-    margin: 0px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*    border: 2px solid #fff; */
 }
 body
 {
@@ -13,14 +14,22 @@ body
     background: #050505;
 	padding: 0;
 	margin: 0;
-	
-	max-width: 1280px;
-	max-height: 1080px;
 }
-.meio
+.frame
 {
-    padding: 50px;
+    background: #fff;
+    color: #3b252b;
+    padding: 30px;
 }
+/* POSIÇÕES DO CUBO E VINCULADO AO ARASTE */
+#minhaDiv 
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 100px;
+}
+/* FORMA DO CUBO */
 .cube
 {
     position: relative;
@@ -41,6 +50,7 @@ body
         transform: rotateX(-30deg) rotateY(360deg)
     }
 }
+/* LATERAIS DO CUBO */
 .cube div
 {
     position: absolute;
@@ -49,8 +59,8 @@ body
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-
 }
+/* ROTAÇÃO DO CUBO */
 .cube div span
 {
     position: absolute;
@@ -58,9 +68,10 @@ body
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#151515, #00ec00);
+    background: linear-gradient(#151515, #006eec);
     transform: rotateY(calc(90deg * var(--i))) translatez(150px);/* 300/2=150 */
 }
+/* PARTE SUPERIOR DO CUBO */
 .top
 {
     position: absolute;
@@ -71,6 +82,7 @@ body
     background: #222;
     transform: rotateX(90deg) translateZ(150px);
 }
+/* SOMBRA DO CUBO */
 .top::before
 {
     content: '';
@@ -79,70 +91,26 @@ body
     left: 0;
     width: 300px;
     height: 300px;
-    background: #0f0;
+    background: #006eec;
     transform: translateZ(-380px);
     filter: blur(20px);
-    box-shadow: 0 0 120px rgba(0,255,0,0.2),
-    0 0 200px rgba(0,255,0,0.4),
-    0 0 300px rgba(0,255,0,0.6),
-    0 0 400px rgba(0,255,0,0.8),
-    0 0 500px rgba(0,255,0,1);
-}
-#minhaDiv 
-{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    box-shadow: 0 0 120px rgba(0,0,255,0.2),
+    0 0 200px rgba(0,0,255,.4),
+    0 0 300px rgba(0,0,255,0.6),
+    0 0 400px rgba(0,0,255,0.8),
+    0 0 500px rgba(0,0,255,1);
 }
 /* GIF */
 .my-element 
 {
-    background-image: url('saw-gif-.gif');
+    background-image: url('../img/hand.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-/* TAMANHO DO GIB */
-#minhaDiv2
+.frame_gif
 {
-    width: 1000px;
-    height: 620px;
-    background-color: #ccc;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+    width: 300px;
+    height: 300px;
 }
-/* POSIÇÃO DO GIF */
-.minhaDiv_gif_P
-{	
-	margin: auto;
-	padding: auto;
-	margin-left: 800px;
-	margin-top: 80px;
-}
-
-/*
-.tarja
-{
-	margin: 100%;
-}
-.arrow-down 
-{
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 20px solid black;
-    transform: rotate(90deg);
-}
-.arrow-up 
-{
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid black;
-}
-*/
